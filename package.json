@@ -1,0 +1,30 @@
+{
+  "name": "jqb-ko-ace",
+  "version": "0.0.1",
+  "description": "ACE Editor Custom Binding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jQbrick/jqb-ko-ace"
+  },
+  "keywords": [
+    "ace",
+    "editor",
+    "knockoutjs",
+    "ko",
+    "binding",
+    "custom binding"
+  ],
+  "author": {
+    "name": "Marco Pegoraro",
+    "url": "http://movableapp.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jQbrick/jqb-ko-ace/issues"
+  },
+  "homepage": "https://github.com/jQbrick/jqb-ko-ace"
+}
