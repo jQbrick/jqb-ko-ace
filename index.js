@@ -17,8 +17,11 @@ ko.bindingHandlers.ace = {
         ko.utils.domData.set(element, 'ace-editor', editor);
         
         // editor configuration
-        editor.setTheme("ace/theme/monokai");
-        editor.getSession().setMode("ace/mode/javascript");
+        var allBindings = allBindingsAccessor();
+        var language = ko.unwrap(allBindings['aceLanguage'] || 'javascript');
+        var theme = ko.unwrap(allBindings['aceTheme'] || 'monokai');
+        editor.setTheme('ace/theme/' + theme);
+        editor.getSession().setMode('ace/mode/' + language);
         
         // initial value
         editor.setValue(ko.unwrap(valueAccessor()));
