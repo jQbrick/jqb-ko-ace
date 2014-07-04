@@ -38,6 +38,10 @@ ko.bindingHandlers.ace = {
     },
     update: function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
         var editor = ko.utils.domData.get(element, 'ace-editor');
-        editor.setValue(ko.unwrap(valueAccessor()), { silent: true });
+        var actualValue = editor.getValue();
+        var newValue = ko.unwrap(valueAccessor());
+        if (newValue !== actualValue) {
+            editor.setValue(newValue, { silent: true });
+        }
     }
 };
